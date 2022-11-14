@@ -1,1 +1,509 @@
 // Revan Gozelov
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  z-index: 9;
+  .container {
+    .navBar {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        display: flex;
+        align-items: center;
+        a {
+          display: inline-block;
+          color: #000;
+          font-size: 20px;
+          padding: 5px 0;
+          margin-right: 16px;
+          font-weight: 300;
+          letter-spacing: 2px;
+        }
+      }
+      .navList {
+        display: flex;
+        .navItem {
+          position: relative;
+          &:hover .dropList {
+            display: block;
+          }
+          .navLink {
+            display: block;
+            color: #000;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 24px 20px;
+            line-height: 25.2px;
+            i {
+              font-size: 13px;
+            }
+          }
+          .dropList {
+            position: absolute;
+            padding: 8px 0;
+            display: none;
+            box-shadow: 0px 10px 34px -20px rgb(0 0 0 / 41%);
+            background-color: #fff;
+            border-radius: 4px;
+            .dropItem {
+              width: 160px;
+              .dropLink {
+                display: block;
+                color: #000;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 4px 24px;
+                line-height: 25.2px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            margin-right: 10px;
+            .navLink {
+              i {
+                margin-left: 4px;
+                position: absolute;
+                font-size: 11px;
+                top: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-white {
+  background-color: #fff;
+  top: 0;
+}
+.sticky-first {
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  position: fixed;
+  top: -100px;
+  .container {
+    .navBar {
+      .navList {
+        .navItem {
+          &:last-child {
+            .navLink {
+              background-color: #f1b8c4;
+              color: #fff;
+            }
+          }
+          .navLink {
+            padding: 14.4px 20px;
+          }
+          .active {
+            color: #f1b8c4;
+          }
+          &:nth-child(2) {
+            margin-right: 10px;
+            .navLink {
+              i {
+                margin-left: 4px;
+                position: absolute;
+                font-size: 11px;
+                top: 20px;
+              }
+            }
+          }
+          .dropList {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+.sticky-second {
+  top: 0;
+  position: fixed;
+  transition: top 0.3s;
+}
+
+// -------------------------------------------------------
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 74px;
+  background-image: url(../images/checkout-background.webp);
+  height: 295px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .title {
+    font-weight: 100;
+    color: #000000;
+    font-size: 40px;
+    font-family: "Lato", Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .info {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+
+    .home-link {
+      color: #000000;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+  }
+}
+.billing {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  .form {
+    padding: 48px;
+    width: 730px;
+    height: 740px;
+    background-color: #f8f9fa;
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #000000;
+      font-family: inherit;
+      margin-bottom: 24px;
+    }
+    .name {
+      display: flex;
+      font-family: "Lato", Arial, sans-serif;
+      .first {
+        margin-bottom: 15px;
+        padding: 0 15px;
+        margin-left: -15px;
+        .first-name1 {
+          color: #000000;
+          font-size: 14px;
+          font-weight: 400;
+          display: block;
+          margin-bottom: -14px;
+        }
+        .first-name2 {
+          width: 302px;
+          height: 58px;
+          padding: 6px 15px;
+          color: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-color: transparent;
+          &:focus {
+            outline: none;
+            border: 1px solid #e83e8c;
+          }
+        }
+      }
+      .last {
+        margin-bottom: 15px;
+        padding: 0 15px;
+        .first-name1 {
+          color: #000000;
+          font-size: 14px;
+          font-weight: 400;
+          display: block;
+          margin-bottom: -14px;
+        }
+        .first-name2 {
+          width: 302px;
+          height: 58px;
+          padding: 6px 15px;
+          color: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-color: transparent;
+          &:focus {
+            outline: none;
+            border: 1px solid #e83e8c;
+          }
+        }
+      }
+    }
+    .option {
+      margin-top: -20px;
+      .option1 {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: -12px;
+      }
+      .option2 {
+        width: 634px;
+        height: 58px;
+        padding: 6px 15px;
+        color: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        &:focus {
+          outline: none;
+          border: 1px solid #e83e8c;
+        }
+      }
+    }
+    .street {
+      display: flex;
+      column-gap: 30px;
+      .left {
+        .adress {
+          width: 302px;
+          height: 58px;
+          padding: 6px 15px;
+          margin-bottom: 15px;
+          margin-top: 8px;
+          color: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-color: transparent;
+          &:focus {
+            outline: none;
+            border: 1px solid #e83e8c;
+          }
+        }
+      }
+    }
+    .town-postcode {
+      display: flex;
+      column-gap: 30px;
+      .town {
+        .town2 {
+          width: 302px;
+          height: 58px;
+          padding: 6px 15px;
+          margin-top: 8px;
+          margin-bottom: 15px;
+          color: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-color: transparent;
+          &:focus {
+            outline: none;
+            border: 1px solid #e83e8c;
+          }
+        }
+      }
+      .postcode {
+        .postcode2 {
+          margin-top: 8px;
+          width: 302px;
+          height: 58px;
+          padding: 6px 15px;
+          color: rgba(0, 0, 0, 0.4);
+          border: 3px solid rgba(0, 0, 0, 0.1);
+          background-color: transparent;
+          margin-bottom: 45px;
+          &:focus {
+            outline: none;
+            border: 1px solid #e83e8c;
+          }
+        }
+      }
+    }
+    .radio {
+      color: #000000;
+      font-size: 14px;
+      font-family: "Lato", Arial, sans-serif;
+    }
+    .radio-first {
+      margin-right: 15px;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  margin-top: 75px;
+  margin-bottom: 250px;
+  .card-left {
+    padding: 30px;
+    width: 350px;
+    height: 420px;
+    background-color: #f8f9fa;
+    p {
+      display: flex;
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      color: #000000;
+      font-family: inherit;
+    }
+    span {
+      width: 50%;
+      display: block;
+      font-weight: 400;
+      color: gray;
+      font-size: 15px;
+    }
+    .span-last {
+      color: #000000;
+      font-size: 15px;
+      font-family: "Lato", Arial, sans-serif;
+      font-weight: 400;
+    }
+  }
+  .card-right {
+    padding: 30px;
+    width: 350px;
+    height: 420px;
+    background-color: #f8f9fa;
+    p {
+      line-height: 1.5;
+      font-weight: 400;
+      color: #000000;
+      font-size: 24px;
+      font-family: inherit;
+      margin-bottom: 24px;
+    }
+    .payment-method {
+      font-family: "Lato", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 400;
+      color: gray;
+      .radio {
+        margin-right: 8px;
+      }
+    }
+    .btn1 {
+      margin-top: 30px;
+      background: #f1b8c4;
+      border: 1px solid #f1b8c4;
+      color: #fff;
+      width: 100%;
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.5;
+      font-family: "Lato", Arial, sans-serif;
+      padding: 16px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: #f1b8c4;
+      }
+    }
+  }
+}
+.subscribe {
+  width: 100%;
+  height: 498px;
+  position: relative;
+  .container2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 118px;
+    .back-title {
+      width: 100%;
+      height: 225px;
+      font-family: "Lato", Arial, sans-serif;
+      position: absolute;
+      top: -110px;
+      font-size: 150px;
+      color: rgba(0, 0, 0, 0.04);
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .front-title {
+      width: 100%;
+      height: 40px;
+      font-size: 30px;
+      font-weight: 400;
+      position: relative;
+      text-transform: uppercase;
+      font-family: "Roboto Condensed", Arial, sans-serif;
+      letter-spacing: 6px;
+      line-height: 1.5;
+      color: #000000;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  }
+  .subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .email {
+      width: 250px;
+      color: black;
+      font-size: 16px;
+      font-family: inherit;
+      height: 52px;
+      padding: 0.375rem 0.75rem;
+    }
+    button {
+      border-left: 1px solid black;
+      color: #fff !important;
+      border-radius: 0;
+      font-size: 16px;
+      background: #000000 !important;
+      font-family: inherit;
+      padding: 0 1rem;
+      height: 52px;
+      margin-left: -2px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .billing {
+    .form {
+      width: 730px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .billing {
+    .form {
+      width: 930px;
+      .name {
+        .first {
+          input[type="text"] {
+            width: 400px;
+          }
+        }
+        .last {
+          input[type="text"] {
+            width: 400px;
+          }
+        }
+      }
+          }
+      }
+    }
+
+@media screen and (max-width: 990px) {
+  .billing {
+    .form {
+      width: 690px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .billing {
+    .form {
+      .name {
+        width: 510px;
+        flex-wrap: wrap;
+        .last {
+          margin-left: -30px;
+        }
+      }
+    }
+  }
+}
